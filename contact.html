@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Контакты</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px 0;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 30px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 10px 0;
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-menu a:hover, .nav-menu a.active {
+            background-color: white;
+            color: #003366;
+        }
+        
+        .page-title {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eaeaea;
+        }
+        
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .contact-icon {
+            background-color: #eef5ff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #003366;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            color: #003366;
+            margin-bottom: 5px;
+            font-size: 1.2em;
+        }
+
+        .contact-details p {
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .contact-details a {
+            color: #00509e;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+            color: #003366;
+        }
+
+        .note {
+            background-color: #f0f7ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 0.95em;
+            color: #555;
+            border-left: 4px solid #00509e;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 0 0 10px 10px;
+            margin-top: 30px;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #00509e;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border: 1px solid #00509e;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #00509e;
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .contact-card {
+                padding: 25px;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contact-icon {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 style="text-align: center; padding: 20px 0;">Моё Резюме</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="education.html">Образование</a></li>
+                    <li><a href="experience.html">Опыт работы</a></li>
+                    <li><a href="contact.html" class="active">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h1 class="page-title">Контактная информация</h1>
+
+        <div class="contact-container">
+            <div class="contact-card">
+                <h2 style="color: #003366; margin-bottom: 30px; text-align: center;">Как со мной связаться</h2>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>ФИО</h3>
+                        <p>Трафимов Сергей Викторович</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Электронная почта</h3>
+                        <p><a href="mailto:ivanov@example.com">s.trafimov2006@mail.ru</a></p>
+                        <p style="font-size: 0.9em; color: #777;">Основной способ связи</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Телефон</h3>
+                        <p><a href="tel:+79991234567">+7 (964) 866-87-82</a></p>
+                        <p style="font-size: 0.9em; color: #777;">Мобильный</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-vk"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Социальные сети</h3>
+                        <p><a href="https://vk.com/strafimov2006" target="_blank">VK: @strafimov2006</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Учебное заведение</h3>
+                        <p>Пензенский государственный технологический университет (ПензГТУ)</p>
+                        <p>Факультет автоматизированных информационных технологий</p>
+                        <p style="font-size: 0.9em; color: #777;">Учебная группа: 24ИВ1б</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Адрес университета</h3>
+                        <p>г. Пенза, проспект Байдукова, 1а/11</p>
+                        <p style="font-size: 0.9em; color: #777;">Пензенский государственный технологический университет</p>
+                    </div>
+                </div>
+
+                <div class="note">
+                    <p><strong>Примечание:</strong> Предпочитаю связь по электронной почте или через VK. Отвечаю в течение 24 часов в рабочие дни. В выходные дни время ответа может быть увеличено.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-link">← Вернуться на главную страницу</a>
+        </div>
+
+         <footer>
+            <p>Резюме студента ПензГТУ | Трафимов С.В. | 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
